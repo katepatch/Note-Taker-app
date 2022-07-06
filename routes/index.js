@@ -1,10 +1,13 @@
-const express = require('express');
+const path = require('path');
 
-const notesRouter = require('./notes');
+//GET /notes
+app.get('/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/notes.html'));
+});
 
-const app = express();
-
-app.use('/notes', notesRouter);
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+});
 
 module.export = app;
 
