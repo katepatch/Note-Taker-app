@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Note Title 1",
+        "text": "Note text",
+        "id": 1
+    },
+    {
+        "title": "Note Title 2",
+        "text": "Note text",
+        "id": 2
+    }
+]
