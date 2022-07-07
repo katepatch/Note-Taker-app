@@ -20,8 +20,8 @@ app.get('/notes', (req, res) => {
 //POST api/notes
 app.post('/notes', (req, res) => {
     req.body.id = uuidv4();
-    const newUserNote = newNote(req.body, notes);
-    res.json(newUserNote);
+    const userNote = newNote(req.body, notes);
+    res.json(userNote);
     // let db = fs.readFileSync('db/db.json');
     // db = JSON.parse(db);
     // res.json(db);
