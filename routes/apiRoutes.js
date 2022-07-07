@@ -33,7 +33,7 @@ const uuid = require('../helpers/uuid');
 const notes = require('express').Router();
 
 // GET Route for retrieving all the notes = /api/notes/
-notes.get('/', (req, res) => {
+app.get('/', (req, res) => {
   readFromFile('./db/tips.json').then((data) => res.json(JSON.parse(data)));
 });
 
