@@ -1,7 +1,6 @@
-const path = require('path');
-const fs = require('fs');
-const uuid = require('../helpers/uuid');
-//const { append } = require('vary');
+const {notes} = require('../Develop/db/db.json')
+const { v4: uuidv4 } = require('uuid');
+const { newNote, newDb } = require('../lib/notes');
 const app = require('express').Router();
 
 // GET Route for retrieving all the notes = /api/notes/
