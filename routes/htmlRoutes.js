@@ -1,6 +1,7 @@
 const path = require('path');
 
 
+
 module.exports = (app) => {
 //GET /notes
 app.get('/notes', (req, res) => {
