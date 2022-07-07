@@ -29,7 +29,7 @@
 const path = require('path');
 const fs = require('fs');
 const uuid = require('../helpers/uuid');
-const { append } = require('vary');
+//const { append } = require('vary');
 const notes = require('express').Router();
 
 // GET Route for retrieving all the notes = /api/notes/
