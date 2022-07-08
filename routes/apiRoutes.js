@@ -1,4 +1,4 @@
-//const {notes} = require('../db/db.json')
+const {notes} = require('../db/db.json')
 const { v4: uuidv4 } = require('uuid');
 const { newNote, newDb } = require('../lib/notes');
 const router = require('express').Router();
