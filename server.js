@@ -39,10 +39,22 @@ router.post('/api/notes', (req, res) => {
 });
 
 //DELETE api/notes
-router.delete("/api/notes/:id", (req, res) => {
-  const notes = require('./db/db.json')
-  const id = req.params.id
-  const result = json.filter((note) => notes.notes_id !== id);
+router.delete("/note_:id", (req, res) => {
+  const noteId = req.params.note_id;
+  readFromFile('./db/db.json')
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+    const result = json.filter((note) => note.note_id !== noteId);
+    writeToFile('./db/db.json', result);
+    res.json(`note ${noteID} has been deleted`);
+  })
+
+  
+  
+  
+  // const notes = require('./db/db.json')
+  // const id = req.params.id
+  // const result = json.filter((note) => notes.notes_id !== id);
   //newDb(params, notes);
   //res.redirect('');
 });
