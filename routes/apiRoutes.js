@@ -16,12 +16,12 @@ router.post('/notes', (req, res) => {
     let db = fs.readFileSync('db/db.json');
     db = JSON.parse(db);
     res.json(db);
-    let userNote = {
+    let newNote = {
         title: req.body.title,
         text: req.body.text,
         id: uuidv4(),
     };
-    db.push(userNote);
+    db.push(newNote);
     fs.writeFileSync('db/db.json', JSON.stringify(db));
     res.json(db);
 });
