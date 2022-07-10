@@ -5,7 +5,7 @@ const apiRouter = require('./apiRoutes');
 
 const app = express();
 
-app.use('/apiRoutes', apiRouter);
+app.use('/api', apiRouter);
 app.use('/htmlRoutes', htmlRouter);
 
 module.exports = app;
