@@ -45,3 +45,12 @@ Heroku: <https://shielded-inlet-26801.herokuapp.com/>
 ## Github Repo URL
 
 <https://github.com/katepatch/Note-Taker-app>
+
+## Screenshot of deployed project
+
+![screenshot](/assets/Screen%20Shot%202022-07-11%20at%204.17.38%20PM.png)
+![Screenshot](/assets/Screen%20Shot%202022-07-11%20at%204.18.25%20PM.png)
+
+## Notes
+
+I was unable to do the bonus of adding the delete button.  I tried my best but I want to turn this project in and start working on the next one.
