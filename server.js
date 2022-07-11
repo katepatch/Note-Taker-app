@@ -39,15 +39,36 @@ router.post('/api/notes', (req, res) => {
 });
 
 //DELETE api/notes
-router.delete("/note_:id", (req, res) => {
-  const noteId = req.params.note_id;
-  readFromFile('./db/db.json')
-    .then((data) => JSON.parse(data))
-    .then((json) => {
-    const result = json.filter((note) => note.note_id !== noteId);
-    writeToFile('./db/db.json', result);
-    res.json(`note ${noteID} has been deleted`);
+router.delete("/api/note_:id", (req, res) => {
+  const noteToDelete = req.params.id;
+  fs.readFile(__dirname + "/db/db.json", (err, data) => {
+    if (err) {
+      console.log(err);
+      res.sendStatus(500);
+      return;
+    }
+    try {
+        let json = JSON.parse(data);
+    } catch (e) {
+      console.log (err);
+      res.sendStatus(500);
+      return;
+    }
+    for (let i = 0; i < json.length; i++) {
+      if (err) {
+        console.log(err);
+        res.sendStatus(500);
+        return;
+      }
+      res.send("Note Deleted");
+    }
   })
+  //   .then((data) => JSON.parse(data))
+  //   .then((json) => {
+  //   const result = json.filter((note) => note.note_id !== noteId);
+  //   writeToFile('./db/db.json', result);
+  //   res.json(`note ${noteID} has been deleted`);
+  // })
 
   
   
